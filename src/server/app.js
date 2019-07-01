@@ -8,16 +8,17 @@ app.get('/', function(req, res){
   res.sendFile(path.resolve(__dirname + '/../client/index.html'));
 });
 
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    return next();
-  });
-
-io.on('connection', function(socket){
+io.of('chat').on('connection', function(socket){
   socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
+    console.log('receive chat', msg);
+    socket.emit('chat message', msg);
+  });
+});
+
+io.of('news').on('connection', function(socket){
+  socket.on('news message', function(msg){
+    console.log('receive news', msg);
+    socket.emit('news message', msg);
   });
 });
 

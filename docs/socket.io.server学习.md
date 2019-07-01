@@ -93,3 +93,6 @@ server 架构设计上采用了分层管理，几大模块负责不同的功能
 
   它是传输层的抽象，通过它上层可以不必关心是polling长轮询还是websocket，上层只需要使用socket(socket.io)。
 
+## server和client 的通信协议
+
+可以参考 [《socket.io 原理分析》](https://juejin.im/entry/5b3b388ae51d4519076922ce)
