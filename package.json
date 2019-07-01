@@ -1,0 +1,29 @@
+{
+  "name": "socket.io-study",
+  "version": "1.0.0",
+  "description": "socket.io 深入学习",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node ./src/server/app.js",
+    "test": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letshare/socket.io-study.git"
+  },
+  "keywords": [
+    "socket.io",
+    "study",
+    "聊天服务",
+    "长连接"
+  ],
+  "author": "letshare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/letshare/socket.io-study/issues"
+  },
+  "homepage": "https://github.com/letshare/socket.io-study#readme"
+}
